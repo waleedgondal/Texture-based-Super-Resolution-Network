@@ -34,5 +34,3 @@ python test.py --upscale_factor 4 --path_model './resources/pretrained/tsrn_glob
 
 ```
 
-## Cite
-
