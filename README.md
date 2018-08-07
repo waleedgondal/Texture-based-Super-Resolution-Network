@@ -33,4 +33,13 @@ test images, the upscaling factor and the corresponding path to the pretrained w
 python test.py --upscale_factor 4 --path_model './resources/pretrained/tsrn_global_4x.pth' --path_data './resources/images'
 
 ```
-
+## Cite
+If you use this work then cite us.
+```
+@article{gondal2018unreasonable,
+  title={The Unreasonable Effectiveness of Texture Transfer for Single Image Super-resolution},
+  author={Gondal, Muhammad Waleed and Sch{\"o}lkopf, Bernhard and Hirsch, Michael},
+  journal={arXiv preprint arXiv:1808.00043},
+  year={2018}
+}
+```
