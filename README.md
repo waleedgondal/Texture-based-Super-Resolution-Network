@@ -2,6 +2,18 @@
 
 This is the pytorch implementation of Texture based Super Resolution Networks (TSRN) presented in the paper [The Unreasonable Effectiveness of Texture Transfer for Single Image Super-resolution](https://arxiv.org/abs/1808.00043). The code is tested on Pytorch v2.0 and v3.1 with python 3.5.
 
+If you use this work then cite us.
+```
+@inproceedings{gondal2018unreasonable,
+  title={The unreasonable effectiveness of texture transfer for single image super-resolution},
+  author={Gondal, Muhammad Waleed and Sch{\"o}lkopf, Bernhard and Hirsch, Michael},
+  booktitle={European Conference on Computer Vision},
+  pages={80--97},
+  year={2018},
+  organization={Springer}
+}
+```
+
 ## Prerequisite
 Install pytorch and torchvision
 first from the official [website](http://pytorch.org/). You can use the following command to install the latest version for python 3.5.
@@ -32,16 +44,4 @@ test images, the upscaling factor and the corresponding path to the pretrained w
 ```
 python test.py --upscale_factor 4 --path_model './resources/pretrained/tsrn_global_4x.pth' --path_data './resources/images'
 
-```
-## Cite
-If you use this work then cite us.
-```
-@inproceedings{gondal2018unreasonable,
-  title={The unreasonable effectiveness of texture transfer for single image super-resolution},
-  author={Gondal, Muhammad Waleed and Sch{\"o}lkopf, Bernhard and Hirsch, Michael},
-  booktitle={European Conference on Computer Vision},
-  pages={80--97},
-  year={2018},
-  organization={Springer}
-}
 ```
