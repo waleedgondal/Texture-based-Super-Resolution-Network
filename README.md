@@ -36,10 +36,12 @@ python test.py --upscale_factor 4 --path_model './resources/pretrained/tsrn_glob
 ## Cite
 If you use this work then cite us.
 ```
-@article{gondal2018unreasonable,
-  title={The Unreasonable Effectiveness of Texture Transfer for Single Image Super-resolution},
+@inproceedings{gondal2018unreasonable,
+  title={The unreasonable effectiveness of texture transfer for single image super-resolution},
   author={Gondal, Muhammad Waleed and Sch{\"o}lkopf, Bernhard and Hirsch, Michael},
-  journal={arXiv preprint arXiv:1808.00043},
-  year={2018}
+  booktitle={European Conference on Computer Vision},
+  pages={80--97},
+  year={2018},
+  organization={Springer}
 }
 ```
