@@ -17,7 +17,7 @@ class Model_4x(nn.Module):
         self.relu = nn.ReLU()
         self.tanh = nn.Tanh()
         self.conv_in = nn.Conv2d(img_channels, feat_size, 3, padding=1)
-        self.instance_normalization = nn.InstanceNorm2d(3)
+        self.instance_normalization = nn.InstanceNorm2d(3, track_running_stats=True)
         self.conv_blocks = nn.ModuleList()
         for _ in range(self.nof_blocks):
             self.conv_blocks.append(
@@ -47,16 +47,16 @@ class Model_4x(nn.Module):
         x = self.conv_up2(x)
         x = self.relu(x)
         return self.conv_out(x)
-  
+
     def _initialize_weights(self):
-        init.xavier_uniform(self.conv_in.weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_in.weight, gain=sqrt(2))
         for i,block in enumerate(self.conv_blocks):
-            init.xavier_uniform(block[0].weight, gain=sqrt(2))
-            init.xavier_uniform(block[1].weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_up_new.weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_up1.weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_up2.weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_out.weight, gain=sqrt(2))
+            init.xavier_uniform_(block[0].weight, gain=sqrt(2))
+            init.xavier_uniform_(block[1].weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_up_new.weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_up1.weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_up2.weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_out.weight, gain=sqrt(2))
 
 class Model_8x(nn.Module):
 
@@ -103,15 +103,15 @@ class Model_8x(nn.Module):
         x = self.relu(x)
         return self.conv_out(x)
 
-    def _initialize_weights(self):         
+    def _initialize_weights(self):
         for i,block in enumerate(self.conv_blocks):
-            init.xavier_uniform(block[0].weight, gain=sqrt(2))
-            init.xavier_uniform(block[1].weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_up_new.weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_up1.weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_up2.weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_up3.weight, gain=sqrt(2))
-        init.xavier_uniform(self.conv_out.weight, gain=sqrt(2))
+            init.xavier_uniform_(block[0].weight, gain=sqrt(2))
+            init.xavier_uniform_(block[1].weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_up_new.weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_up1.weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_up2.weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_up3.weight, gain=sqrt(2))
+        init.xavier_uniform_(self.conv_out.weight, gain=sqrt(2))
 
 class VGG(nn.Module):
     'Pretrained VGG-19 model features.'
@@ -139,5 +139,4 @@ class VGG(nn.Module):
                 features.append(x)
                 if len(features) == len(self.layers):
                     break
-        return features         
-        
+        return features
