@@ -1,6 +1,6 @@
 # The Unreasonable Effectiveness of Texture Transfer for Single Image Super-resolution.
 
-This is the pytorch implementation of Texture based Super Resolution Networks (TSRN) presented in the paper [The Unreasonable Effectiveness of Texture Transfer for Single Image Super-resolution](https://arxiv.org/abs/1808.00043). The code is tested on Pytorch > v4.0 with python 3.5.
+This is the pytorch implementation of Texture based Super Resolution Networks (TSRN) presented in the paper [The Unreasonable Effectiveness of Texture Transfer for Single Image Super-resolution](https://arxiv.org/abs/1808.00043). The code is tested on Pytorch > v0.4 with python 3.5.
 
 If you use this work then cite us.
 ```
