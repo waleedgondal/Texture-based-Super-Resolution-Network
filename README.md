@@ -4,13 +4,12 @@ This is the pytorch implementation of Texture based Super Resolution Networks (T
 
 If you use this work then cite us.
 ```
-@inproceedings{gondal2018unreasonable,
+@inproceedings{waleed2018unreasonable,
   title={The unreasonable effectiveness of texture transfer for single image super-resolution},
-  author={Gondal, Muhammad Waleed and Sch{\"o}lkopf, Bernhard and Hirsch, Michael},
-  booktitle={European Conference on Computer Vision},
-  pages={80--97},
-  year={2018},
-  organization={Springer}
+  author={Waleed Gondal, Muhammad and Scholkopf, Bernhard and Hirsch, Michael},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  pages={0--0},
+  year={2018}
 }
 ```
 
